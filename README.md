@@ -18,4 +18,4 @@
 
 ## 06.업무기록
 - [노블시스템](06.NobleSystems/)
-- settings
+
