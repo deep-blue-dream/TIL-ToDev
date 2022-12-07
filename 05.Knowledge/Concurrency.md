@@ -1,7 +1,7 @@
-# 동시성 처리 문제 (Concureency)
+# - 동시성 처리 문제 (Concureency)
 
 
-## 동시성 이슈?
+## 1. 동시성 이슈?
 -> 부끄럽게도 들었던 내용인데, 정작 간단한 기술 면접 상황에서 어버버거리면서 답변을 못했던게 사실이다. 멀티스레드 상황에서 하나의 자원을 공유하기 때문에 같은 자원을 두고 경쟁상태가 발생하는 것을 간단히 동시성 이슈라고 할 수 있다. 
 
 여기서 파생되는 동시성과 병렬성(Parallel)의 차이점도 알아둘 필요는 있다.
@@ -28,10 +28,38 @@
 
 ---
 
-## 동시성을 제어하는 방법
+## 2. 동시성을 제어하는 방법
+[Lock 이슈 정리](Lock.md)
 
 1. 암시적 Lock(synchronized)
     - 동시성을 해결하는 가장 간단한 방법은 Lock을 거는 것이다.
-    - 문제가 되는 메서드, 변수에 각각 synchronized라는 키워드를 넣는다.
+    - 문제가 되는 메서드, 변수에 각각 걸 수 있으며 synchronized라는 키워드를 넣는다.
+    - 이때 메서드에 lock을 걸게 되면 해당 메서드에 진입하는 스레드는 단 하나로 제한된다.
+    - 변수에 lock을 걸 경우 해당 변수는 하나의 스레드만 참조할 수 있다. 이때, 변수에 lock을 걸기 위해서는 해당 변수는 **객채**여야 한다.
+    - **int, long** 같은 기본 타입에는 lock을 걸 수 없다.
 
+### 2-1. 메서드 Lock
+```java
+class Count {
+    private int count;
+    public synchronized int view() {
+        return count++;
+    }
+}
+```
 
+### 2-2. 변수 Lock
+```java
+class Count {
+    private Integer count = 0;
+    public int view() {
+        synchronized (this.count) {
+            return count++;
+        }
+    }
+}
+```
+
+## 3. 명시적 Lock
+
+synchronized 키워드 없이 명시적으로 ReentrantLock을 사용하는 방법을 명시적 Lock이라고 한다.
