@@ -18,4 +18,4 @@
 
 ## 06.업무기록
 - [노블시스템](06.NobleSystems/)
-
+- [노션](https://developer-yoon.notion.site/OFbiz-6c61bf2baeb349ef9bcb91e9c3a5fa18)
