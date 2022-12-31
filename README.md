@@ -15,6 +15,7 @@
 - [Lock의 두가지 방법](02.CS/03.%20Concurrency%20&%20Lock/Lock.md)
 
 ## 03.(Why)해당 기술 스택은 왜 쓰는지 알아보자.
+- [equals()와 hashCode()](03.Why/000.equals&hashcode/Equals&HashCode.md)
 
 ## 04.(Trouble Shooting)마주쳤던 문제들을 해결 한 과정을 알아보자.
 
