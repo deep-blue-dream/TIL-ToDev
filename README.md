@@ -9,7 +9,7 @@
 ## 01.(Books) 책을 읽자.
 - [클린 코드]
 - [이펙티드 자바]
-test
+
 ## 02.(CS) 이론적인 부분을 정리해보자.(내가 겪었던 프로젝트와 관련한 문제들을 자연스레 풀이 위한 CS 지식들)
 - [동시성 처리](02.CS/03.%20Concurrency%20&%20Lock/Concurrency.md)
 - [Lock의 두가지 방법](02.CS/03.%20Concurrency%20&%20Lock/Lock.md)
