@@ -4,7 +4,6 @@
 [참고블로그](https://f-lab.kr/blog/sustainable-developer-growth-skills)
 
 ## 00.(Diary) 기록하자.
-- [22년도 11월 기록](00.Diary/2022/11)
 - [22년도 12월 기록](00.Diary/2022/12)
 - [23년도 01월 기록](00.Diary/2023/01)
 ## 01.(Books) 책을 읽자.
